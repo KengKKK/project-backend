@@ -37,7 +37,7 @@ type IDS struct {
 	ID []int `json:"id"`
 }
 
-// DB :
+// DB : 👍👍👍
 var DB *gorm.DB
 
 func main() {
