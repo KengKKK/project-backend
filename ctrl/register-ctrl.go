@@ -1,7 +1,6 @@
 package ctrl
 
 import (
-	"kk-backend/backend-project/db"
 	"strconv"
 
 	"github.com/gin-gonic/gin"
@@ -10,9 +9,6 @@ import (
 
 // RegisterCtrl :
 type RegisterCtrl struct{}
-
-// DB :
-var DB *gorm.DB
 
 // IDS :
 type IDS struct {
@@ -25,6 +21,12 @@ type RegisterPeople struct {
 	Fname string `json:"fname" gorm:"type:varchar(20)"`
 	Lname string `json:"lname" gorm:"type:varchar(20)"`
 	Email string `json:"fac" gorm:"type:varchar(30)"`
+}
+
+// ModelRegsiter ;
+func ModelRegsiter() RegisterPeople {
+	return RegisterPeople{}
+
 }
 
 // Read :
