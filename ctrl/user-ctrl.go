@@ -11,6 +11,7 @@ import (
 // UserCtrl :
 type UserCtrl struct{}
 
+//DB :
 var DB *gorm.DB
 
 // IDS :

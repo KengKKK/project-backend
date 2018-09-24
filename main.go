@@ -6,11 +6,7 @@ import (
 	"github.com/9lon/gonylon"
 	"github.com/gin-gonic/gin"
 	_ "github.com/go-sql-driver/mysql"
-	"github.com/jinzhu/gorm"
 )
-
-// DB : 👍👍👍
-var DB *gorm.DB
 
 func main() {
 

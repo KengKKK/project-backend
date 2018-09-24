@@ -11,6 +11,7 @@ import (
 // RegisterCtrl :
 type RegisterCtrl struct{}
 
+// DB :
 var DB *gorm.DB
 
 // IDS :
@@ -21,12 +22,9 @@ type IDS struct {
 // RegisterPeople :
 type RegisterPeople struct {
 	gorm.Model
-	Career     string `json:"car" gorm:"type:varchar(20)"`
-	Fname      string `json:"fname" gorm:"type:varchar(30)"`
-	Lname      string `json:"lname" gorm:"type:varchar(30)"`
-	Age        int    `json:"age"`
-	Faculty    string `json:"fac" gorm:"type:varchar(30)"`
-	Department string `json:"dep" gorm:"type:varchar(30)"`
+	Fname string `json:"fname" gorm:"type:varchar(20)"`
+	Lname string `json:"lname" gorm:"type:varchar(20)"`
+	Email string `json:"fac" gorm:"type:varchar(30)"`
 }
 
 // Read :

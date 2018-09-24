@@ -8,6 +8,7 @@ import (
 
 // RegisterRoute :
 func RegisterRoute(r *gin.RouterGroup) {
+
 	registerCtrl := ctrl.RegisterCtrl{}
 	r.GET("/", registerCtrl.Read)
 	r.POST("/", registerCtrl.Insert)
