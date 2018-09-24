@@ -11,6 +11,13 @@ import (
 // RegisterCtrl :
 type RegisterCtrl struct{}
 
+var DB *gorm.DB
+
+// IDS :
+type IDS struct {
+	ID []int `json:"id"`
+}
+
 // RegisterPeople :
 type RegisterPeople struct {
 	gorm.Model
