@@ -1,9 +1,6 @@
 package main
 
 import (
-	"fmt"
-	"kk-backend/backend-lab/config"
-	"kk-backend/backend-project/ctrl"
 	"kk-backend/backend-project/route"
 
 	"github.com/9lon/gonylon"
@@ -17,15 +14,8 @@ var DB *gorm.DB
 
 func main() {
 
-	config := config.GetConfig()
-	full := config.User + ":" + config.Pass + "@tcp(" + config.Host + ")/" + config.DBname + "?charset=utf8&parseTime=true"
-	db, err := gorm.Open("mysql", full)
-	DB = db
-	if err != nil {
-		fmt.Println(err)
-	}
-	db.AutoMigrate(ctrl.ModelRegsiter())
-	defer db.Close()
+	db.AutoMigrate(ctrl.&UserRegister{})
+	//db.AutoMigrate(&DeviceModel{})
 
 	db.InitDB()
 
